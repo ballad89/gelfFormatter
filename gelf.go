@@ -118,6 +118,8 @@ func (f *Formatter) Format(entry *log.Entry) ([]byte, error) {
 		entry.Data["line"] = line
 	}
 
+	entry.Data["severity"] = entry.Level.String()
+
 	additionalFields := formatAdditionalfields(entry.Data)
 
 	m.Extra = additionalFields
