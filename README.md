@@ -5,9 +5,13 @@ This is a [logrus](https://github.com/sirupsen/logrus) formatter which formats l
 This library is hugely based on the [graylog gelf library](https://github.com/Graylog2/go-gelf) but differs in that it is complaint with [12 factor log principles](https://12factor.net/logs), which states ... 
 
 ```text
-A twelve-factor app never concerns itself with routing or storage of its output stream. It should not attempt to write to or manage logfiles. Instead, each running process writes its event stream, unbuffered, to stdout. During local development, the developer will view this stream in the foreground of their terminal to observe the app’s behavior.
+A twelve-factor app never concerns itself with routing or storage of its output stream.
+It should not attempt to write to or manage logfiles.
+Instead, each running process writes its event stream, unbuffered, to stdout. During local development, the developer will view this stream in the foreground of their terminal to observe the app’s behavior.
 
-In staging or production deploys, each process’ stream will be captured by the execution environment, collated together with all other streams from the app, and routed to one or more final destinations for viewing and long-term archival. These archival destinations are not visible to or configurable by the app, and instead are completely managed by the execution environment. Open-source log routers (such as Logplex and Fluent) are available for this purpose.
+In staging or production deploys, each process’ stream will be captured by the execution environment, collated together with all other streams from the app, and routed to one or more final destinations for viewing and long-term archival.
+These archival destinations are not visible to or configurable by the app, and instead are completely managed by the execution environment.
+Open-source log routers (such as Logplex and Fluent) are available for this purpose.
 ```
 
 ### Installation
